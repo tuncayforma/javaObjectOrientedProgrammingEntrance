@@ -1,0 +1,3 @@
+class PersianCat extends Cat {
+
+}

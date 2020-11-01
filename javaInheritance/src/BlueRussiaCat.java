@@ -1,0 +1,3 @@
+class BlueRussiaCat extends Cat {
+
+}

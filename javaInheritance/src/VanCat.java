@@ -1,0 +1,3 @@
+class VanCat extends Cat{
+
+}
