@@ -38,7 +38,7 @@ public class Stack {
             System.out.println("Yığında veri yok");
         }
     }
-    public String list(){ //Elemanları listeleme
+    public void list(){ //Elemanları listeleme
         Node yedek = bas;
         String liste ="";
         while (yedek != null){
@@ -47,7 +47,7 @@ public class Stack {
         }
         return liste;
     }
-    public void search(int sayi){ //Arama yapma
+    public boolean sayiAra(int sayi){ //Arama yapma
         Node yedek = bas;
         int siraNo=1;
         String mesaj = "";
@@ -56,12 +56,14 @@ public class Stack {
                 mesaj+= "Veri listede mevcut ve "+siraNo+". sırada";
                 System.out.println(mesaj);
                 break;
+                return true;
             }
             siraNo+=1;
             yedek=yedek.sonraki;
         }
         if(mesaj.equals("")){
             System.out.println("Aradığınız veri listede mevcut değil.");
+            return false;
         }
     }
 }
