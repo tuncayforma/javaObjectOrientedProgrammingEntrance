@@ -65,5 +65,21 @@ public class bagliListe {
             System.out.println("Aradığınız veri listede mevcut değil.");
         }
     }
+    public void remove(){
+        Node current = bas;
+        Node next;
+        if(bas == null){
+            return;
+        }
+        while (current.sonraki != null){
+            if(current.veri == current.sonraki.veri){
+                next = current.sonraki.sonraki;
+                current.sonraki = null;
+                current.sonraki = next;
+            }
+            else
+                current = current.sonraki;
+        }
+    }
 
 }
